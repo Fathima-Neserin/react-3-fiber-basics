@@ -1,9 +1,28 @@
+/* Reset margins, paddings, and set box-sizing globally */
 * {
-  width : 100%;
-  height : 100%;
-  margin : 0;
+  margin: 0;
   padding: 0;
+ 
+  box-sizing: border-box;
 }
-body{
+
+/* Ensure body and html fill the full viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: black;
+}
+
+/* Make sure Navbar has no additional margin or padding */
+nav {
+  margin: 0;
+  padding: 10px;
+}
+
+/* Canvas should take up the full height of the viewport minus the Navbar height */
+canvas {
+  display: block; /* This removes any default inline behavior */
+  height: calc(100vh - 60px); /* Subtracting Navbar height */
+  width: 100%;
 }
